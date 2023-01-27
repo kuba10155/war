@@ -40,6 +40,6 @@ function determineCardWinner(card1, card2) {
   "Card 2 wins!" : "War!"
 }
 
-newDeckBtn.addEventListener("click", handleClick)
+
 newDeckBtn.addEventListener("click", handleClick)
 drawCardsBtn.addEventListener("click", getCards)
