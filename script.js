@@ -41,4 +41,5 @@ function determineCardWinner(card1, card2) {
 }
 
 newDeckBtn.addEventListener("click", handleClick)
+newDeckBtn.addEventListener("click", handleClick)
 drawCardsBtn.addEventListener("click", getCards)
