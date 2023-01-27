@@ -1,7 +1,10 @@
 body {
+  align-items: center;
   background-image: url("table.png");
   background-size: cover;
+  color: white;
   display: flex;
+  font-family: "Exo 2", sans-serif;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;

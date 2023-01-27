@@ -2,6 +2,7 @@ let deckId = ""
 const cardsContainer = document.getElementById("cards")
 const drawCardsBtn = document.getElementById("draw-cards-btn")
 const newDeckBtn = document.getElementById("new-deck-btn")
+const winnerText = document.getElementById("winner")
 
 function handleClick() {
   fetch("https://deckofcardsapi.com/api/deck/new/shuffle/")
@@ -23,7 +24,7 @@ function getCards() {
         `
         i++
       }
-      console.log(determineCardWinner(data.cards[0].value, data.cards[1].value))
+      winnerText.textContent = determineCardWinner(data.cards[0].value, data.cards[1].value)
     })
 }
 
@@ -34,8 +35,8 @@ function determineCardWinner(card1, card2) {
   const card2ValueIndex = cardsValue.indexOf(card2)
 
   return card1ValueIndex > card2ValueIndex ?
-  "First card wins!" : card2ValueIndex > card1ValueIndex ?
-  "Second card wins!" : "It's a tie!"
+  "Card 1 wins!" : card2ValueIndex > card1ValueIndex ?
+  "Card 2 wins!" : "War!"
 }
 
 newDeckBtn.addEventListener("click", handleClick)
