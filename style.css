@@ -1,0 +1,50 @@
+body {
+  background-image: url("table.png");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  background: yellow;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.new-deck-btn {
+  align-self: flex-start;
+  border-radius: 5%;
+}
+
+.draw-cards-btn {
+  font-size: 1.2em;
+}
+
+.card {
+  height: 100%;
+  width: 100%;
+}
+
+.card-slot {
+  border: 1px solid black;
+  border-radius: 6%;
+  width: 150px;
+  height: calc(150px * 7 / 5);  /* Karty występują w formacie 5/7 */
+}
+
+.cards-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 10px 0;
+}
+
+div.card-slot:nth-of-type(2) {
+    margin-bottom: 50px;
+}
