@@ -24,7 +24,8 @@ function getCards() {
         `
         i++
       }
-      winnerText.textContent = determineCardWinner(data.cards[0].value, data.cards[1].value)
+      winnerText.textContent = determineCardWinner(data.cards[0].value,
+      data.cards[1].value)
     })
 }
 
