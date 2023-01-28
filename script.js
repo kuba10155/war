@@ -38,6 +38,7 @@ function getCards() {
       }
       if(data.remaining == 0) {
         drawCardsBtn.disabled = true
+        getRemainingCards(data.remaining)
         determineFinalWinner()
       }
       getScore()
