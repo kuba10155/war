@@ -1,19 +1,22 @@
-body {
-  align-items: center;
+html, body {
   background-image: url("table.png");
-  background-size: cover;
-  color: white;
-  display: flex;
   font-family: "Exo 2", sans-serif;
-  flex-direction: column;
   height: 100vh;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
 }
 
+body {
+  align-items: center;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .btn {
-  background: yellow;
+  background: #FFF100;
   border: none;
   cursor: pointer;
   padding: 5px;
@@ -25,12 +28,8 @@ body {
 }
 
 .draw-cards-btn {
+  align-self: stretch;
   font-size: 1.2em;
-}
-
-.card {
-  height: 100%;
-  width: 100%;
 }
 
 .card-slot {
@@ -40,14 +39,30 @@ body {
   height: calc(150px * 7 / 5);  /* Karty występują w formacie 5/7 */
 }
 
-.cards-container {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  margin: 10px 0;
+div.card-slot:nth-of-type(1) {
+    margin-bottom: 10px;
 }
 
-div.card-slot:nth-of-type(2) {
-    margin-bottom: 50px;
+.card {
+  height: 100%;
+  width: 100%;
+}
+
+.top {
+  align-items: flex-start;
+  align-self: flex-start;
+  display: flex;
+}
+
+.top p {
+  margin: 0;
+  margin-left: 10px;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+h2 {
+  margin: 10px;
 }
